@@ -177,16 +177,13 @@ Cards Project
 .card-footer span {
   color: var(--cor-prim);
 }
-
-@media screen and (min-width: 768px) {
-  .cards-center {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 2rem;
-  }
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
 }
-@media screen and (min-width: 1170px) {
-  .cards-center {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.cards-center {
+  display: grid;
+  column-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(249px, 1fr));
 }
